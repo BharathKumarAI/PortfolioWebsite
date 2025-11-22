@@ -1,15 +1,15 @@
 // Personal Information Configuration
 export const personalInfo = {
   name: "Bharath Kancharla",
-  title: "Lead Software Engineer",
+  title: "AI Engineer",
   tagline: "Data & GenAI Professional | Cloud Solution Architect",
   description: "Highly accomplished Data and GenAI professional with 10+ years of experience in Data Engineering, ETL Development, and Solution Architecture. Expert in designing scalable data solutions using Python, Spark, SQL, and Azure/AWS ecosystems.",
-  email: "bharath.kancharla@example.com",
+  email: "bharath.aiexp@gmail.com",
   location: "Overland Park, USA",
   
   // Hero Section
   hero: {
-    badge: "Lead Software Engineer",
+    badge: "AI Engineer",
     heading: {
       line1: "Architecting",
       line2: "Data & AI Solutions"
@@ -21,11 +21,11 @@ export const personalInfo = {
   about: {
     title: "About Me",
     paragraphs: [
-      "I am a Lead Software Engineer with over 10 years of experience in Data Engineering, ETL Development, and Solution Architecture across telecom, healthcare, and CPG sectors. My expertise lies in designing and optimizing scalable data warehouses on Snowflake and Azure/AWS platforms.",
-      "I specialize in leveraging advanced analytics, including NLP and Machine Learning, to deliver proactive business solutions. Recently, I have been spearheading GenAI initiatives, developing Proof of Concepts (POCs) and integrating bot frameworks to automate complex workflows.",
-      "I have a proven track record of leading development teams, optimizing complex SQL queries for performance, and orchestrating data pipelines using tools like Azure Data Factory, Databricks, and Airflow. I am passionate about clean code, robust data modeling, and continuous innovation."
+      "I am an AI Engineer with over 10 years of expertise in Data Engineering and Solution Architecture. I specialize in building scalable data ecosystems on Snowflake and Azure/AWS that serve as the backbone for advanced Artificial Intelligence and Machine Learning applications.",
+      "My passion lies in Generative AI, where I architect and deploy LLM-driven solutions. From developing RAG pipelines to integrating intelligent bot frameworks, I focus on transforming complex business challenges into streamlined, automated workflows using cutting-edge NLP and AI technologies.",
+      "With a proven track record in the telecom, healthcare, and CPG sectors, I combine deep technical knowledge of Spark, Python, and SQL with strategic leadership. I am dedicated to driving innovation, optimizing performance, and delivering impactful AI solutions that solve real-world problems."
     ],
-    image: "/profile.jpg", 
+    image: "/profile.jpeg", 
   },
   
   // Social Links
@@ -40,7 +40,6 @@ export const personalInfo = {
   // Contact Information
   contact: {
     email: "bharath.aiexp@gmail.com",
-    phone: "+1 (555) 123-4567",
     availability: "Open to opportunities",
   }
 };
@@ -74,7 +73,7 @@ export const skills = {
 
 // SEO & Metadata
 export const siteMetadata = {
-  title: "Bharath Kancharla - Lead Software Engineer",
+  title: "Bharath Kancharla - AI Engineer",
   description: "Portfolio of Bharath Kancharla, a Data and GenAI professional specializing in Data Engineering, Snowflake, and Cloud Architecture.",
   keywords: ["Data Engineer", "GenAI", "Snowflake", "Python", "Azure", "Spark", "ETL", "Software Engineer"],
   siteUrl: "https://bharath-kancharla.com",

@@ -79,7 +79,7 @@ export default function Footer() {
                         transition={{ duration: 0.6, delay: 0.3 }}
                     >
                         <p className="text-gray-400 text-sm">
-                            &copy; {currentYear} Portfolio. All rights reserved.
+                            &copy; {currentYear} {personalInfo.name}. All rights reserved.
                         </p>
                         <p className="text-gray-500 text-xs">
                             Built with{' '}

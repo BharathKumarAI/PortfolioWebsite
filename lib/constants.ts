@@ -1,6 +1,6 @@
 // Constants used throughout the application
 
-export const SITE_NAME = "Portfolio";
+export const SITE_NAME = "Bharath Kancharla";
 export const ITEMS_PER_PAGE = 9;
 
 // Animation Durations (in seconds)

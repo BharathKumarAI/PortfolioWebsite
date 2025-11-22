@@ -4,7 +4,8 @@ import { motion } from 'framer-motion';
 import { useRef } from 'react';
 import { useInView } from 'framer-motion';
 import { personalInfo } from '@/lib/config';
-import { User, MapPin, Mail } from 'lucide-react';
+import { User, Mail } from 'lucide-react';
+import Image from 'next/image';
 
 export default function About() {
     const ref = useRef(null);
@@ -39,9 +40,13 @@ export default function About() {
                     className="relative"
                 >
                     <div className="card-modern p-8 rounded-2xl">
-                        <div className="aspect-square bg-gradient-to-br from-emerald-500/20 to-cyan-500/20 rounded-xl flex items-center justify-center mb-6 relative overflow-hidden">
-                            {/* Placeholder for profile image */}
-                            <User className="w-32 h-32 text-emerald-400/50" />
+                        <div className="aspect-square bg-gradient-to-br from-emerald-500/20 to-cyan-500/20 rounded-xl flex items-center justify-center mb-6 relative overflow-hidden group">
+                            <Image 
+                                src={personalInfo.about.image}
+                                alt={personalInfo.name}
+                                fill
+                                className="object-cover transition-transform duration-500 group-hover:scale-110"
+                            />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                         </div>
                         
@@ -55,24 +60,14 @@ export default function About() {
                                     <p className="font-semibold">{personalInfo.name}</p>
                                 </div>
                             </div>
-                            
+
                             <div className="flex items-center gap-3 text-gray-300">
                                 <div className="p-2 bg-cyan-500/10 rounded-lg border border-cyan-500/20">
-                                    <MapPin className="w-5 h-5 text-cyan-400" />
+                                    <User className="w-5 h-5 text-cyan-400" />
                                 </div>
                                 <div>
-                                    <p className="text-sm text-gray-500">Location</p>
-                                    <p className="font-semibold">{personalInfo.location}</p>
-                                </div>
-                            </div>
-                            
-                            <div className="flex items-center gap-3 text-gray-300">
-                                <div className="p-2 bg-violet-500/10 rounded-lg border border-violet-500/20">
-                                    <Mail className="w-5 h-5 text-violet-400" />
-                                </div>
-                                <div>
-                                    <p className="text-sm text-gray-500">Email</p>
-                                    <p className="font-semibold text-sm break-all">{personalInfo.email}</p>
+                                    <p className="text-sm text-gray-500">Role</p>
+                                    <p className="font-semibold">{personalInfo.title}</p>
                                 </div>
                             </div>
                         </div>
@@ -119,4 +114,3 @@ export default function About() {
         </section>
     );
 }
-

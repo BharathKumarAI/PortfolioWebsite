@@ -20,7 +20,7 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: {
     default: siteMetadata.title,
-    template: "%s | Portfolio"
+    template: "%s | Bharath Kancharla"
   },
   description: siteMetadata.description,
   keywords: siteMetadata.keywords,
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     title: siteMetadata.title,
     description: siteMetadata.description,
-    siteName: "Portfolio",
+    siteName: "Bharath Kancharla",
   },
   twitter: {
     card: "summary_large_image",

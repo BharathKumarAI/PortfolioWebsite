@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ExternalLink, Calendar, Building2, Tag } from 'lucide-react';
-import { ContentItem } from '@/lib/content';
+import { ContentItem } from '@/lib/types';
 import ReactMarkdown from 'react-markdown';
 
 interface CardProps {

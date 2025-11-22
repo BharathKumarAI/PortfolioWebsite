@@ -1,6 +1,6 @@
 'use client';
 
-import { ContentItem } from '@/lib/content';
+import { ContentItem } from '@/lib/types';
 import Card from './Card';
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';

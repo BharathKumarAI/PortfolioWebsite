@@ -51,7 +51,6 @@ export const NAV_LINKS = [
   { name: 'About', href: '/about', id: 'about' },
   { name: 'Projects', href: '/projects', id: 'projects' },
   { name: 'Experience', href: '/experience', id: 'experience' },
-  { name: 'Contact', href: '/contact', id: 'contact' },
 ] as const;
 
 // Section IDs

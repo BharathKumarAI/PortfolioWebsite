@@ -4,9 +4,40 @@ import PageHeader from '@/components/PageHeader';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Twitter } from 'lucide-react';
 import { personalInfo } from '@/lib/config';
+import { useState } from 'react';
 
 export default function ContactPage() {
   const socialLinks = personalInfo.social;
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    const { name, email, subject, message } = formData;
+    
+    // Construct the email body
+    const body = `Name: ${name}
+Email: ${email}
+
+Message:
+${message}`;
+
+    // Create mailto link
+    const mailtoLink = `mailto:${personalInfo.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    // Open default mail client
+    window.location.href = mailtoLink;
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
 
   return (
     <div>
@@ -24,12 +55,7 @@ export default function ContactPage() {
         >
           <div className="card-modern p-8 rounded-2xl mb-12">
             <h3 className="text-2xl font-bold text-white mb-6">Send a Message</h3>
-            <form 
-              className="space-y-6" 
-              action={`mailto:${personalInfo.email}`}
-              method="POST"
-              encType="text/plain"
-            >
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label htmlFor="name" className="text-sm text-gray-400">Name</label>
@@ -37,8 +63,11 @@ export default function ContactPage() {
                     type="text" 
                     id="name" 
                     name="name"
+                    value={formData.name}
+                    onChange={handleChange}
                     className="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-3 text-white focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/50 outline-none transition-all"
                     placeholder="Your name"
+                    required
                   />
                 </div>
                 <div className="space-y-2">
@@ -47,8 +76,11 @@ export default function ContactPage() {
                     type="email" 
                     id="email" 
                     name="email"
+                    value={formData.email}
+                    onChange={handleChange}
                     className="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-3 text-white focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/50 outline-none transition-all"
                     placeholder="Your email"
+                    required
                   />
                 </div>
               </div>
@@ -58,18 +90,24 @@ export default function ContactPage() {
                   type="text" 
                   id="subject" 
                   name="subject"
+                  value={formData.subject}
+                  onChange={handleChange}
                   className="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-3 text-white focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/50 outline-none transition-all"
                   placeholder="Project inquiry"
+                  required
                 />
               </div>
               <div className="space-y-2">
                 <label htmlFor="message" className="text-sm text-gray-400">Message</label>
                 <textarea 
                   id="message" 
-                  name="body"
+                  name="message"
                   rows={6}
+                  value={formData.message}
+                  onChange={handleChange}
                   className="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-3 text-white focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/50 outline-none transition-all resize-none"
                   placeholder="Tell me about your project..."
+                  required
                 />
               </div>
               <button 

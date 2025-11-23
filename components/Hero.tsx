@@ -74,7 +74,7 @@ export default function Hero() {
                         transition={{ duration: 0.5, delay: 0.25 }}
                         className="flex flex-wrap justify-center gap-3 max-w-2xl mx-auto"
                     >
-                        {['Snowflake', 'Databricks', 'GenAI', 'Python', 'Azure', 'Spark'].map((tech) => (
+                        {['GenAI', 'Snowflake', 'Databricks', 'Python', 'Azure', 'Spark'].map((tech) => (
                             <span key={tech} className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-sm text-gray-300">
                                 {tech}
                             </span>

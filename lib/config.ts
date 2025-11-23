@@ -12,7 +12,7 @@ export const personalInfo = {
     badge: "AI Engineer",
     heading: {
       line1: "Architecting",
-      line2: "Data & AI Solutions"
+      line2: "Solutions"
     },
     description: "Expert in designing, building, and optimizing scalable data solutions using Python, Apache Spark, and Cloud ecosystems. Leveraging GenAI and Advanced Analytics to drive business efficiency."
   },
